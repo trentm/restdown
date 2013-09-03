@@ -151,6 +151,18 @@ Metadata can also be provided on the command-line with the `-d|--define` option.
 
     restdown --define mediaroot=/ index.restdown
 
+## Using Metadata Fields
+
+You can also access the values of the metadata fields you set in your markdown as follows:
+
+    ---
+    author: John Doe
+    created: 3rd September 2013
+    ---
+
+    The author of this document is #{author}. It was created on #{created}.
+
+
 
 # JSON API Summary
 

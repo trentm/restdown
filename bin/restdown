@@ -269,6 +269,9 @@ def restdown(metadata, markdown, brand_dir=None, doc_dir=None):
     @returns {str, dict} The HTML document (full page) and a dict giving
         data about the API: version, endpoints.
     """
+    for key in metadata:
+        markdown = re.sub(r"#{" + key + "}", metadata.get(key), markdown)
+
     doc_markdown_opts = copy.deepcopy(markdown_opts)
     for extra in metadata.get("markdown2extras", []):
         doc_markdown_opts["extras"][extra] = True
