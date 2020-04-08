@@ -46,7 +46,7 @@ $(function() {
             $("#sidebar li>div").removeClass("current");
             currSectionIdx = sectionIdx;
             if (currSectionIdx >= 0) {
-                var heading = $(sections[currSectionIdx]).text();
+                var heading = $(sections[currSectionIdx]).attr('id');
                 var possibleAnchors = [
                     slugify(heading), // h1 or non-method h2
                     heading.replace(/ /g, '-'), // h2 method, just name or just endpoint
